@@ -1,0 +1,30 @@
+.form {
+    display: table;
+    margin: 0 auto;
+}
+.form-select {
+    float: left;
+    width: 150px;
+
+}
+ .form-input {
+    float: left;
+    width: 200px;
+     margin-left: 0.3em;
+
+}
+ .form-button {
+     float: left;
+     width: 50px;
+     margin-left: 0.3em;
+
+ }
+.float-left {
+    float: left;
+    margin: 0.2em;
+}
+.map-position {
+    width: 800px;
+    height: 450px;
+    margin: auto
+}

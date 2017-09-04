@@ -1,0 +1,15 @@
+.ng-valid[required], .ng-valid.required  {
+    border-bottom: 5px solid mediumseagreen;
+}
+
+.ng-invalid:not(form)  {
+    border-bottom: 5px solid gray;
+}
+
+.size {
+    margin: auto;
+    width: 30%;
+    border: 2px solid gray;
+    padding: 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,45 @@
+<div>
+<!--Add Points-->
+    <div class="form" *ngIf="isShowForm">
+        <form [formGroup]="pointForm" (ngSubmit)="onSubmit()">
+            <div class="form-select form-group">
+                <select id="object" class="form-control" formControlName="object">
+                    <option *ngFor="let object of objects" value="{{object}}">{{object}}</option>
+                </select>
+            </div>
+            <div class="form-input form-group">
+                <input id="description" type="text" class="form-control"
+                       formControlName="description" placeholder="description"/>
+            </div>
+            <div class="form-button">
+                <button type="submit" class="btn btn-default">Save</button>
+            </div>
+        </form>
+    </div>
+
+<!--Show points-->
+    <div class="form" *ngIf="!isShowForm">
+        <div class="float-left">
+            <button class="btn btn-default" (click)="zoomIn()">Zoom In</button>
+        </div>
+        <div class="float-left">
+            <button class="btn btn-default" (click)="zoomOut()">Zoom Out</button>
+        </div>
+        <div class="float-left">
+            <form [formGroup]="pointFormShow" (ngSubmit)="onPointsShow()">
+                <div class="form-select form-group">
+                    <select id="objectShow" class="form-control" formControlName="object">
+                        <option *ngFor="let object of objects" value="{{object}}">{{object}}</option>
+                    </select>
+                </div>
+
+                <div class="form-button">
+                    <button type="submit" class="btn btn-default">Show</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="map" class="map-position"></div>
+</div>
